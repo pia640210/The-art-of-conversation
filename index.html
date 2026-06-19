@@ -13,6 +13,7 @@
     --ink-card:#241F17;
     --paper:#F2E9D8;
     --paper-soft:#E7DCC6;
+    --paper-card:#FBF8F2;
     --seal:#B83B1E;
     --seal-deep:#922F17;
     --gold:#9C7A45;
@@ -50,11 +51,6 @@
     pointer-events:none;
     user-select:none;
     z-index:0;
-  }
-  .stroke-divider{
-    width:64px;
-    height:18px;
-    margin:28px 0;
   }
   .seal{
     display:inline-flex;
@@ -95,371 +91,195 @@
       var(--ink);
     overflow:hidden;
   }
-  .hero .ghost-char{
-    right:-10vw;
-    top:10%;
-    font-size:54vw;
-    opacity:0.035;
-  }
+  .hero .ghost-char{right:-10vw;top:10%;font-size:54vw;opacity:0.035;}
   .hero-grid{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:52px;
-    flex-wrap:wrap;
-    position:relative;
-    z-index:1;
+    display:flex;align-items:center;justify-content:space-between;
+    gap:52px;flex-wrap:wrap;position:relative;z-index:1;
   }
   .hero-text{flex:1 1 340px;}
   .hero-eyebrow-row{display:flex;align-items:center;gap:14px;margin-bottom:26px;}
   .hero h1{
-    font-family:var(--serif);
-    font-weight:900;
+    font-family:var(--serif);font-weight:900;
     font-size:clamp(32px, 5.6vw, 60px);
-    line-height:1.32;
-    letter-spacing:0.01em;
-    max-width:11ch;
+    line-height:1.32;letter-spacing:0.01em;max-width:11ch;
   }
   .hero h1 .accent{color:var(--seal);}
-  .hero p.lede{
-    margin-top:26px;
-    max-width:32ch;
-    font-size:17px;
-    color:var(--paper-soft);
-    opacity:0.85;
-  }
-  .cover-stack{
-    position:relative;
-    flex:0 0 260px;
-    width:260px;
-    height:330px;
-  }
-  .cover-stack img{
-    position:absolute;
-    width:190px;
-    border-radius:10px;
-    box-shadow:0 28px 50px -16px rgba(0,0,0,0.65);
-  }
+  .hero p.lede{margin-top:26px;max-width:32ch;font-size:17px;color:var(--paper-soft);opacity:0.85;}
+  .cover-stack{position:relative;flex:0 0 260px;width:260px;height:330px;}
+  .cover-stack img{position:absolute;width:190px;border-radius:10px;box-shadow:0 28px 50px -16px rgba(0,0,0,0.65);}
   .cover-stack .cover-3{left:4px;top:58px;transform:rotate(-13deg);z-index:1;animation:coverIn3 .8s ease both;animation-delay:.35s;}
   .cover-stack .cover-2{left:64px;top:34px;transform:rotate(7deg);z-index:2;animation:coverIn2 .8s ease both;animation-delay:.2s;}
   .cover-stack .cover-1{left:30px;top:0;transform:rotate(-4deg);z-index:3;animation:coverIn1 .8s ease both;animation-delay:.05s;}
   @keyframes coverIn1{from{opacity:0;transform:translateY(28px) rotate(-4deg) scale(.96);}to{opacity:1;transform:translateY(0) rotate(-4deg) scale(1);}}
   @keyframes coverIn2{from{opacity:0;transform:translateY(28px) rotate(7deg) scale(.96);}to{opacity:1;transform:translateY(0) rotate(7deg) scale(1);}}
   @keyframes coverIn3{from{opacity:0;transform:translateY(28px) rotate(-13deg) scale(.96);}to{opacity:1;transform:translateY(0) rotate(-13deg) scale(1);}}
-  @media (max-width:900px){
-    .hero-grid{justify-content:center;text-align:left;}
-    .cover-stack{margin:8px auto 0;}
-  }
+  @media (max-width:900px){.hero-grid{justify-content:center;text-align:left;}.cover-stack{margin:8px auto 0;}}
   .scroll-cue{
-    position:absolute;
-    bottom:36px;
-    left:28px;
-    font-size:12px;
-    letter-spacing:0.25em;
-    color:var(--gold);
-    display:flex;
-    align-items:center;
-    gap:10px;
+    position:absolute;bottom:36px;left:28px;font-size:12px;letter-spacing:0.25em;color:var(--gold);
+    display:flex;align-items:center;gap:10px;
   }
   .scroll-cue .line{width:1px;height:34px;background:linear-gradient(var(--gold), transparent);}
 
   /* ---------- 痛點對話區 ---------- */
-  .pain{
-    background:var(--ink);
-    padding:100px 0 90px;
-    position:relative;
-  }
+  .pain{background:var(--ink);padding:100px 0 90px;position:relative;}
   .pain .wrap{max-width:680px;}
   .pain-intro{margin-bottom:48px;}
-  .pain-intro h2{
-    font-family:var(--serif);
-    font-weight:700;
-    font-size:clamp(24px,3.6vw,32px);
-    margin-top:14px;
-  }
+  .pain-intro h2{font-family:var(--serif);font-weight:700;font-size:clamp(24px,3.6vw,32px);margin-top:14px;}
   .bubble-row{display:flex;margin-bottom:18px;}
   .bubble-row.from-right{justify-content:flex-end;}
   .bubble{
-    background:var(--ink-card);
-    border:1px solid rgba(156,122,69,0.25);
-    border-radius:18px;
-    padding:18px 22px;
-    max-width:78%;
-    font-size:15.5px;
-    color:var(--paper);
+    background:var(--ink-card);border:1px solid rgba(156,122,69,0.25);border-radius:18px;
+    padding:18px 22px;max-width:78%;font-size:15.5px;color:var(--paper);
   }
   .bubble-row:not(.from-right) .bubble{border-top-left-radius:4px;}
   .bubble-row.from-right .bubble{border-top-right-radius:4px;background:#2B2419;}
   .pain-close{
-    margin-top:40px;
-    font-family:var(--serif);
-    font-size:19px;
-    line-height:1.9;
-    color:var(--paper-soft);
-    border-top:1px solid rgba(156,122,69,0.25);
-    padding-top:32px;
+    margin-top:40px;font-family:var(--serif);font-size:19px;line-height:1.9;color:var(--paper-soft);
+    border-top:1px solid rgba(156,122,69,0.25);padding-top:32px;
   }
 
-  /* ---------- 核心價值（紙色翻面） ---------- */
-  .values{
-    background:var(--paper);
-    color:var(--ink);
-    padding:100px 0;
-  }
+  /* ---------- 核心價值 ---------- */
+  .values{background:var(--paper);color:var(--ink);padding:100px 0;}
   .values .eyebrow{color:var(--seal-deep);}
-  .values h2{
-    font-family:var(--serif);
-    font-weight:700;
-    font-size:clamp(24px,3.6vw,32px);
-    margin-top:14px;
-    margin-bottom:54px;
-    max-width:16ch;
-  }
-  .pillar{
-    display:flex;
-    gap:22px;
-    padding:30px 0;
-    border-top:1px solid rgba(92,86,75,0.25);
-  }
+  .values h2{font-family:var(--serif);font-weight:700;font-size:clamp(24px,3.6vw,32px);margin-top:14px;margin-bottom:54px;max-width:16ch;}
+  .pillar{display:flex;gap:22px;padding:30px 0;border-top:1px solid rgba(92,86,75,0.25);}
   .pillar:last-child{border-bottom:1px solid rgba(92,86,75,0.25);}
-  .pillar-mark{
-    flex-shrink:0;
-    width:8px;
-    height:8px;
-    border-radius:50%;
-    background:var(--seal);
-    margin-top:10px;
-  }
-  .pillar h3{
-    font-family:var(--serif);
-    font-size:19px;
-    font-weight:700;
-    margin-bottom:8px;
-  }
+  .pillar-mark{flex-shrink:0;width:8px;height:8px;border-radius:50%;background:var(--seal);margin-top:10px;}
+  .pillar h3{font-family:var(--serif);font-size:19px;font-weight:700;margin-bottom:8px;}
   .pillar p{font-size:15px;color:var(--ink-grey);}
 
+  /* ---------- 作者權威區 ---------- */
+  .authority{background:var(--paper);color:var(--ink);padding:30px 0 100px;}
+  .authority .eyebrow{color:var(--seal-deep);}
+  .authority h2{font-family:var(--serif);font-weight:700;font-size:clamp(24px,3.6vw,32px);margin:14px 0 10px;max-width:18ch;}
+  .authority .sub{font-size:15.5px;color:var(--ink-grey);max-width:46ch;margin-bottom:48px;}
+  .authority-grid{display:flex;gap:40px;align-items:flex-start;flex-wrap:wrap;}
+  .authority-photo{flex:0 0 200px;width:200px;border-radius:16px;overflow:hidden;box-shadow:0 20px 40px -16px rgba(0,0,0,0.3);}
+  .authority-body{flex:1 1 320px;}
+  .authority-name{font-family:var(--serif);font-weight:700;font-size:20px;margin-bottom:16px;}
+  .authority-list{list-style:none;margin:0 0 28px;}
+  .authority-list li{font-size:14.5px;color:var(--ink-grey);padding-left:18px;position:relative;margin-bottom:9px;}
+  .authority-list li::before{content:"·";color:var(--seal);position:absolute;left:4px;}
+  .authority-quote{
+    font-family:var(--serif);font-size:17px;line-height:1.85;
+    border-top:1px solid rgba(92,86,75,0.25);padding-top:24px;
+  }
+
+  /* ---------- 差異化比較 ---------- */
+  .compare{background:var(--ink);padding:100px 0;}
+  .compare .eyebrow{color:var(--gold);}
+  .compare h2{font-family:var(--serif);font-weight:700;font-size:clamp(24px,3.6vw,32px);margin:14px 0 44px;max-width:18ch;}
+  .compare-head{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:14px;}
+  .compare-head span{font-size:12px;letter-spacing:0.15em;color:var(--ink-grey);}
+  .compare-head span:last-child{color:var(--seal);font-weight:700;}
+  .compare-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:14px;}
+  .compare-cell{padding:18px 18px;border-radius:10px;font-size:14.5px;line-height:1.6;}
+  .compare-cell.generic{background:var(--ink-card);color:var(--paper-soft);opacity:.75;border:1px solid rgba(156,122,69,0.15);}
+  .compare-cell.ours{background:rgba(184,59,30,0.14);color:var(--paper);border:1px solid rgba(184,59,30,0.4);font-weight:500;}
+  @media (max-width:640px){
+    .compare-cell{font-size:13px;padding:14px;}
+    .compare-head span{font-size:10.5px;}
+  }
+
   /* ---------- 作者親自分享 ---------- */
-  .authorvid{
-    background:var(--paper);
-    color:var(--ink);
-    padding:90px 0 100px;
-  }
+  .authorvid{background:var(--paper);color:var(--ink);padding:90px 0 100px;}
   .authorvid .eyebrow{color:var(--seal-deep);}
-  .authorvid h2{
-    font-family:var(--serif);
-    font-weight:700;
-    font-size:clamp(24px,3.6vw,32px);
-    margin:14px 0 46px;
-    max-width:20ch;
-  }
-  .video-grid{
-    display:grid;
-    grid-template-columns:repeat(3, 1fr);
-    gap:22px;
-  }
-  .video-card{
-    background:var(--ink);
-    border-radius:12px;
-    overflow:hidden;
-    box-shadow:0 18px 40px -18px rgba(0,0,0,0.35);
-  }
+  .authorvid h2{font-family:var(--serif);font-weight:700;font-size:clamp(24px,3.6vw,32px);margin:14px 0 46px;max-width:20ch;}
+  .video-grid{display:grid;grid-template-columns:repeat(3, 1fr);gap:22px;}
+  .video-card{background:var(--ink);border-radius:12px;overflow:hidden;box-shadow:0 18px 40px -18px rgba(0,0,0,0.35);}
   .video-frame{position:relative;width:100%;aspect-ratio:16/9;}
   .video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0;}
-  .video-label{
-    padding:13px 16px;
-    font-size:13px;
-    color:var(--paper-soft);
-    letter-spacing:0.04em;
-  }
-  @media (max-width:760px){
-    .video-grid{grid-template-columns:1fr;}
-  }
+  .video-label{padding:14px 16px;font-size:13px;line-height:1.6;color:var(--paper-soft);letter-spacing:0.02em;}
+  @media (max-width:760px){.video-grid{grid-template-columns:1fr;}}
 
-  /* ---------- 三冊（卷一二三） ---------- */
-  .volumes{
-    background:var(--ink);
-    padding:100px 0;
-    position:relative;
-  }
-  .volumes .ghost-char{
-    left:-10vw;
-    bottom:-8%;
-    font-size:48vw;
-    opacity:0.04;
-  }
+  /* ---------- 三冊 ---------- */
+  .volumes{background:var(--ink);padding:100px 0;position:relative;}
+  .volumes .ghost-char{left:-10vw;bottom:-8%;font-size:48vw;opacity:0.04;}
   .volumes-head{position:relative;z-index:1;margin-bottom:54px;}
-  .volumes-head h2{
-    font-family:var(--serif);
-    font-weight:700;
-    font-size:clamp(24px,3.6vw,32px);
-    margin-top:14px;
-  }
+  .volumes-head h2{font-family:var(--serif);font-weight:700;font-size:clamp(24px,3.6vw,32px);margin-top:14px;}
   .volume-card{
-    position:relative;
-    z-index:1;
-    display:flex;
-    gap:28px;
-    background:var(--ink-card);
-    border:1px solid rgba(156,122,69,0.22);
-    border-radius:12px;
-    padding:32px 28px;
-    margin-bottom:22px;
+    position:relative;z-index:1;display:flex;gap:28px;background:var(--ink-card);
+    border:1px solid rgba(156,122,69,0.22);border-radius:12px;padding:32px 28px;margin-bottom:22px;
   }
-  .volume-cover{
-    width:128px;
-    flex-shrink:0;
-    border-radius:10px;
-    box-shadow:0 16px 34px -12px rgba(0,0,0,0.55);
-  }
-  .volume-body .tag{
-    font-size:12px;
-    letter-spacing:0.2em;
-    color:var(--seal);
-    font-weight:700;
-  }
-  .volume-body h3{
-    font-family:var(--serif);
-    font-size:clamp(18px,2.4vw,22px);
-    font-weight:700;
-    margin:8px 0 16px;
-    line-height:1.5;
-  }
+  .volume-cover{width:128px;flex-shrink:0;border-radius:10px;box-shadow:0 16px 34px -12px rgba(0,0,0,0.55);}
+  .volume-body .tag{font-size:12px;letter-spacing:0.2em;color:var(--seal);font-weight:700;}
+  .volume-body h3{font-family:var(--serif);font-size:clamp(18px,2.4vw,22px);font-weight:700;margin:8px 0 14px;line-height:1.5;}
+  .vol-outcome{font-family:var(--serif);font-weight:700;font-size:17px;color:var(--paper);margin-bottom:14px;}
+  .learn-label{font-size:12px;color:var(--gold);letter-spacing:0.1em;display:block;margin-bottom:8px;}
   .volume-body ul{list-style:none;}
-  .volume-body li{
-    font-size:14.5px;
-    color:var(--paper-soft);
-    opacity:0.85;
-    padding-left:18px;
-    position:relative;
-    margin-bottom:8px;
-  }
-  .volume-body li::before{
-    content:"·";
-    color:var(--gold);
-    position:absolute;
-    left:4px;
-  }
-  .volume-foot{
-    margin-top:18px;
-    display:flex;
-    gap:16px;
-    font-size:12.5px;
-    color:var(--ink-grey);
-  }
+  .volume-body li{font-size:14.5px;color:var(--paper-soft);opacity:0.85;padding-left:18px;position:relative;margin-bottom:8px;}
+  .volume-body li::before{content:"·";color:var(--gold);position:absolute;left:4px;}
+  .volume-foot{margin-top:18px;display:flex;gap:16px;font-size:12.5px;color:var(--ink-grey);}
 
-  /* ---------- 金句輪播 ---------- */
-  .quotes{
-    position:relative;
-    background:var(--ink);
-    padding:130px 0;
-    overflow:hidden;
-    display:flex;
-    align-items:center;
-    min-height:50vh;
+  /* ---------- 讀者見證 ---------- */
+  .testimonials{background:var(--paper);color:var(--ink);padding:100px 0;}
+  .testimonials .eyebrow{color:var(--seal-deep);}
+  .testimonials h2{font-family:var(--serif);font-weight:700;font-size:clamp(24px,3.6vw,32px);margin:14px 0 46px;}
+  .test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .test-card{background:var(--paper-card);border:1px solid rgba(92,86,75,0.18);border-radius:12px;padding:26px 24px;}
+  .stars{color:var(--seal);font-size:14px;margin-bottom:14px;letter-spacing:2px;}
+  .test-quote{font-size:14.5px;line-height:1.8;margin-bottom:16px;color:var(--ink);}
+  .test-author{font-size:13px;color:var(--ink-grey);font-weight:700;}
+  @media (max-width:760px){.test-grid{grid-template-columns:1fr;}}
+
+  /* ---------- 讀者成果區 ---------- */
+  .outcomes{background:var(--ink);padding:110px 0;position:relative;}
+  .outcomes .ghost-char{right:-8vw;bottom:-12%;font-size:46vw;opacity:0.045;}
+  .outcomes .eyebrow{color:var(--gold);}
+  .outcomes h2{
+    position:relative;z-index:1;font-family:var(--serif);font-weight:900;
+    font-size:clamp(26px,4.2vw,38px);margin:14px 0 24px;max-width:16ch;
   }
-  .quotes .ghost-char{
-    right:-4vw;
-    top:-10%;
-    font-size:50vw;
-    opacity:0.045;
-  }
+  .outcomes-intro{position:relative;z-index:1;font-size:15.5px;color:var(--paper-soft);opacity:.85;max-width:48ch;margin-bottom:44px;}
+  .outcomes-grid{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:18px 30px;}
+  .outcomes-grid li{list-style:none;font-size:16px;display:flex;gap:10px;}
+  .outcomes-grid li::before{content:"✓";color:var(--seal);font-weight:700;}
+  @media (max-width:640px){.outcomes-grid{grid-template-columns:1fr;}}
+
+  /* ---------- 金句 ---------- */
+  .quotes{position:relative;background:var(--ink);padding:130px 0;overflow:hidden;display:flex;align-items:center;min-height:50vh;}
+  .quotes .ghost-char{right:-4vw;top:-10%;font-size:50vw;opacity:0.045;}
   .quote-stage{position:relative;z-index:1;min-height:200px;}
   .quote-item{
-    position:absolute;
-    inset:0;
-    opacity:0;
-    transition:opacity 1s ease;
-    font-family:var(--serif);
-    font-size:clamp(20px,3.6vw,30px);
-    line-height:1.65;
-    max-width:24ch;
+    position:absolute;inset:0;opacity:0;transition:opacity 1s ease;
+    font-family:var(--serif);font-size:clamp(20px,3.6vw,30px);line-height:1.65;max-width:24ch;
   }
   .quote-item.active{opacity:1;position:relative;}
-  .quote-item::before{
-    content:"「";
-    color:var(--seal);
-  }
-  .quote-item::after{
-    content:"」";
-    color:var(--seal);
-  }
+  .quote-item::before{content:"「";color:var(--seal);}
+  .quote-item::after{content:"」";color:var(--seal);}
   .quote-dots{display:flex;gap:8px;margin-top:34px;}
-  .quote-dots span{
-    width:6px;height:6px;border-radius:50%;
-    background:rgba(242,233,216,0.25);
-    transition:background .3s;
-  }
+  .quote-dots span{width:6px;height:6px;border-radius:50%;background:rgba(242,233,216,0.25);transition:background .3s;}
   .quote-dots span.active{background:var(--gold);}
 
+  /* ---------- FAQ ---------- */
+  .faq{background:var(--paper);color:var(--ink);padding:100px 0;}
+  .faq .eyebrow{color:var(--seal-deep);}
+  .faq h2{font-family:var(--serif);font-weight:700;font-size:clamp(24px,3.6vw,32px);margin:14px 0 40px;}
+  .faq-item{border-top:1px solid rgba(92,86,75,0.25);padding:26px 0;}
+  .faq-item:last-child{border-bottom:1px solid rgba(92,86,75,0.25);}
+  .faq-item h3{font-family:var(--serif);font-size:18px;font-weight:700;margin-bottom:10px;display:flex;gap:10px;}
+  .faq-item h3::before{content:"Q";color:var(--seal);}
+  .faq-item p{font-size:15px;color:var(--ink-grey);padding-left:23px;}
+
   /* ---------- CTA ---------- */
-  .cta{
-    background:var(--paper);
-    color:var(--ink);
-    padding:110px 0 90px;
-    text-align:center;
-  }
+  .cta{background:var(--paper);color:var(--ink);padding:110px 0 90px;text-align:center;}
   .cta .eyebrow{color:var(--seal-deep);}
-  .cta h2{
-    font-family:var(--serif);
-    font-weight:900;
-    font-size:clamp(28px,4.4vw,40px);
-    margin:16px 0 36px;
-  }
-  .benefits{
-    display:inline-flex;
-    flex-direction:column;
-    gap:14px;
-    text-align:left;
-    margin-bottom:48px;
-  }
-  .benefits li{list-style:none;font-size:15.5px;display:flex;gap:10px;}
-  .benefits li::before{content:"✔";color:var(--seal);font-weight:700;}
-  .cta-covers{
-    display:flex;
-    justify-content:center;
-    gap:14px;
-    margin-bottom:34px;
-  }
-  .cta-covers img{
-    width:68px;
-    border-radius:6px;
-    box-shadow:0 10px 22px -8px rgba(0,0,0,0.4);
-  }
-  .price-row{
-    font-family:var(--serif);
-    font-size:18px;
-    margin-bottom:34px;
-    color:var(--ink-grey);
-  }
+  .cta h2{font-family:var(--serif);font-weight:900;font-size:clamp(28px,4.4vw,40px);margin:16px 0 36px;}
+  .cta-covers{display:flex;justify-content:center;gap:14px;margin-bottom:34px;}
+  .cta-covers img{width:68px;border-radius:6px;box-shadow:0 10px 22px -8px rgba(0,0,0,0.4);}
+  .price-row{font-family:var(--serif);font-size:18px;margin-bottom:34px;color:var(--ink-grey);}
   .price-row strong{color:var(--ink);font-size:26px;font-weight:700;}
   .seal-button{
-    display:inline-flex;
-    align-items:center;
-    gap:10px;
-    background:var(--seal);
-    color:var(--paper);
-    font-family:var(--serif);
-    font-weight:700;
-    font-size:17px;
-    padding:18px 42px;
-    border-radius:8px;
-    text-decoration:none;
-    transform:rotate(-1.2deg);
-    transition:transform .25s ease, background .25s ease;
+    display:inline-flex;align-items:center;gap:10px;background:var(--seal);color:var(--paper);
+    font-family:var(--serif);font-weight:700;font-size:17px;padding:18px 42px;border-radius:8px;
+    text-decoration:none;transform:rotate(-1.2deg);transition:transform .25s ease, background .25s ease;
     box-shadow:0 14px 30px -10px rgba(184,59,30,0.55);
   }
   .seal-button:hover{transform:rotate(0deg) translateY(-2px);background:var(--seal-deep);}
   .seal-button:focus-visible{outline:3px solid var(--gold);outline-offset:3px;}
-  .cta-note{margin-top:18px;font-size:13px;color:var(--ink-grey);}
+  .cta-note{margin-top:20px;font-size:14px;color:var(--ink-grey);line-height:1.8;max-width:30ch;margin-left:auto;margin-right:auto;}
 
-  footer{
-    background:var(--ink);
-    color:var(--ink-grey);
-    text-align:center;
-    padding:36px 0;
-    font-size:13px;
-    letter-spacing:0.04em;
-  }
+  footer{background:var(--ink);color:var(--ink-grey);text-align:center;padding:36px 0;font-size:13px;letter-spacing:0.04em;}
 
   /* ---------- RESPONSIVE ---------- */
   @media (max-width:640px){
@@ -468,7 +288,8 @@
     .volume-card{flex-direction:column;gap:14px;}
     .volume-cover{width:120px;}
     .bubble{max-width:88%;}
-    .benefits{text-align:left;}
+    .authority-grid{flex-direction:column;}
+    .authority-photo{width:160px;}
   }
 </style>
 </head>
@@ -502,12 +323,10 @@
       <span class="eyebrow">靈魂拷問</span>
       <h2>你是否也曾遇過這些困境？</h2>
     </div>
-
     <div class="bubble-row reveal"><div class="bubble">明明是一番好意，卻總是「言者無心，聽者有意」，被人誤解？</div></div>
     <div class="bubble-row from-right reveal"><div class="bubble">遇到心儀的對象或重要客戶，總是腦袋空白、找不到話題，聊沒幾句就冷場？</div></div>
     <div class="bubble-row reveal"><div class="bubble">面對別人講話很衝、喜歡找碴或咄咄逼人，你總是毫無招架之力，只能生悶氣？</div></div>
     <div class="bubble-row from-right reveal"><div class="bubble">在職場上努力做事，卻因為不會跟老闆、同事溝通，導致升遷受阻、懷才不遇？</div></div>
-
     <p class="pain-close reveal">在交友、戀愛、工作、做生意甚至家庭關係中，只要沒有把話說好的能力，幾乎沒有任何勝算——不會說話的痛苦，就像隨時陷在焦慮與被誤解的地獄裡。</p>
   </div>
 </section>
@@ -519,27 +338,68 @@
       <span class="eyebrow">這不是一本工具書</span>
       <h2>而是一套由內而外、改變命運的內功心法</h2>
     </div>
+    <div class="pillar reveal">
+      <span class="pillar-mark"></span>
+      <div><h3>誠意，永遠在技巧之上</h3>
+        <p>世間最動人的話語，關鍵在於你內心那份「心意」。當你把對方放在心上，用最純粹的真心交流，就能把話說到心坎裡。</p></div>
+    </div>
+    <div class="pillar reveal">
+      <span class="pillar-mark"></span>
+      <div><h3>不只教你說，更教你「懂」</h3>
+        <p>溝通是為了達到完全的「了解」。我們不僅教你如何表達，更教你如何聽懂別人的言外之意，學會察言觀色，看穿對方心思。</p></div>
+    </div>
+    <div class="pillar reveal">
+      <span class="pillar-mark"></span>
+      <div><h3>從基本功到實戰演練</h3>
+        <p>說話像是一門武功，沒有蹲好馬步，學再多絕招也沒用。鍛鍊聲音、語調、速度控制，並運用在各種衝突與尷尬場合中。</p></div>
+    </div>
+  </div>
+</section>
 
-    <div class="pillar reveal">
-      <span class="pillar-mark"></span>
-      <div>
-        <h3>誠意，永遠在技巧之上</h3>
-        <p>世間最動人的話語，關鍵在於你內心那份「心意」。當你把對方放在心上，用最純粹的真心交流，就能把話說到心坎裡。</p>
+<!-- ============ 作者權威區 ============ -->
+<section class="authority">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">作者權威</span>
+      <h2>這套書，來自數十年第一線溝通實戰</h2>
+      <p class="sub">不是理論整理，而是陳海倫顧問數十年陪伴人們成長所累積的真實經驗。</p>
+    </div>
+    <div class="authority-grid reveal">
+      <img class="authority-photo" src="author.jpg" alt="陳海倫顧問">
+      <div class="authority-body">
+        <div class="authority-name">陳海倫 顧問</div>
+        <ul class="authority-list">
+          <li>心橋創辦人</li>
+          <li>超過30年實務經驗</li>
+          <li>長期協助家庭、親子、伴侶與職場溝通</li>
+          <li>帶領無數成長課程與工作坊</li>
+          <li>專精人際關係與生命成長議題</li>
+        </ul>
+        <p class="authority-quote">她相信：<br>所有的人際困境，最後都會回到「溝通」兩個字。</p>
       </div>
     </div>
-    <div class="pillar reveal">
-      <span class="pillar-mark"></span>
-      <div>
-        <h3>不只教你說，更教你「懂」</h3>
-        <p>溝通是為了達到完全的「了解」。我們不僅教你如何表達，更教你如何聽懂別人的言外之意，學會察言觀色，看穿對方心思。</p>
-      </div>
+  </div>
+</section>
+
+<!-- ============ 差異化 ============ -->
+<section class="compare">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">差異化</span>
+      <h2>市面上教說話的書很多，但大多只教技巧</h2>
     </div>
-    <div class="pillar reveal">
-      <span class="pillar-mark"></span>
-      <div>
-        <h3>從基本功到實戰演練</h3>
-        <p>說話像是一門武功，沒有蹲好馬步，學再多絕招也沒用。鍛鍊聲音、語調、速度控制，並運用在各種衝突與尷尬場合中。</p>
-      </div>
+    <div class="compare-head reveal"><span>一般溝通書</span><span>說話的藝術</span></div>
+    <div class="compare-row reveal">
+      <div class="compare-cell generic">教你怎麼說</div>
+      <div class="compare-cell ours">詳細說明為什麼你會說不出來</div>
+    </div>
+    <div class="compare-row reveal">
+      <div class="compare-cell generic">教話術</div>
+      <div class="compare-cell ours">讓你理解人心</div>
+    </div>
+    <div class="compare-row reveal">
+      <div class="compare-cell generic">解決表面問題</div>
+      <div class="compare-cell ours">解決根本問題</div>
     </div>
   </div>
 </section>
@@ -549,20 +409,20 @@
   <div class="wrap">
     <div class="reveal">
       <span class="eyebrow">作者親自分享</span>
-      <h2>在翻開書之前，先聽陳海倫顧問親自說說</h2>
+      <h2>先認識作者，再翻開這套書</h2>
     </div>
     <div class="video-grid reveal">
       <div class="video-card">
-        <div class="video-frame"><iframe src="https://www.youtube.com/embed/B-nbbE6PcHc" title="陳海倫顧問 作者分享影片一" loading="lazy" allowfullscreen></iframe></div>
-        <div class="video-label">作者談話・一</div>
+        <div class="video-frame"><iframe src="https://www.youtube.com/embed/B-nbbE6PcHc" title="《說話的藝術》出書初衷：改變命運的關鍵說話力" loading="lazy" allowfullscreen></iframe></div>
+        <div class="video-label">出書初衷：改變命運的關鍵說話力</div>
       </div>
       <div class="video-card">
-        <div class="video-frame"><iframe src="https://www.youtube.com/embed/ZlZ88ATRRIE" title="陳海倫顧問 作者分享影片二" loading="lazy" allowfullscreen></iframe></div>
-        <div class="video-label">作者談話・二</div>
+        <div class="video-frame"><iframe src="https://www.youtube.com/embed/ZlZ88ATRRIE" title="《說話的藝術》適用情境：全方位的日常溝通實戰指南" loading="lazy" allowfullscreen></iframe></div>
+        <div class="video-label">適用情境：全方位的日常溝通實戰指南</div>
       </div>
       <div class="video-card">
-        <div class="video-frame"><iframe src="https://www.youtube.com/embed/K-m0WGDvjmQ" title="陳海倫顧問 作者分享影片三" loading="lazy" allowfullscreen></iframe></div>
-        <div class="video-label">作者談話・三</div>
+        <div class="video-frame"><iframe src="https://www.youtube.com/embed/K-m0WGDvjmQ" title="《說話的藝術》全套精華解析：從基本功到人生難題的完整解答" loading="lazy" allowfullscreen></iframe></div>
+        <div class="video-label">全套精華：從基本功到人生難題的完整解答</div>
       </div>
     </div>
   </div>
@@ -582,10 +442,12 @@
       <div class="volume-body">
         <span class="tag">卷一・內功養成篇</span>
         <h3>講對話讓你上天堂，說錯話讓你見閻王！</h3>
+        <p class="vol-outcome">學會先理解自己</p>
+        <span class="learn-label">你會學到</span>
         <ul>
-          <li>向內探索：說話之前，先學會和自己溝通、了解自己的情緒</li>
-          <li>傾聽的藝術：聽話只聽字面意思會發生什麼災難？</li>
-          <li>圓融與尊重：如何說出別人愛聽的話而不顯逢迎？</li>
+          <li>管理情緒</li>
+          <li>提升自我覺察</li>
+          <li>避免衝動傷人</li>
         </ul>
         <div class="volume-foot"><span>ISBN 978-986-89796-2-8</span><span>NT$380</span></div>
       </div>
@@ -596,10 +458,12 @@
       <div class="volume-body">
         <span class="tag">卷二・技巧實戰篇</span>
         <h3>真金不怕火煉，只怕你從來都不練！</h3>
+        <p class="vol-outcome">讓別人更願意聽你說話</p>
+        <span class="learn-label">你會學到</span>
         <ul>
-          <li>入門到進階基本功：音質、口齒、音量、順暢度</li>
-          <li>精確對焦與控制：掌握說話主動權、控制時間與速度</li>
-          <li>攻守合一：如何卸下對方心防？如何創造精彩公眾演講？</li>
+          <li>增加說服力</li>
+          <li>強化表達能力</li>
+          <li>建立影響力</li>
         </ul>
         <div class="volume-foot"><span>ISBN 978-986-89796-3-5</span><span>NT$380</span></div>
       </div>
@@ -610,14 +474,63 @@
       <div class="volume-body">
         <span class="tag">卷三・情境破解篇</span>
         <h3>你怎樣說話，決定你是怎樣的人！</h3>
+        <p class="vol-outcome">面對難搞的人也不再害怕</p>
+        <span class="learn-label">你會學到</span>
         <ul>
-          <li>化解危機與尷尬：話不投機、冷場、衝突、羞辱挑釁</li>
-          <li>職場與談判交涉：如何讓上司賞識？談判如何雙贏？</li>
-          <li>搞定難搞的人：愛搶話、口出惡言、死不認錯的應對策略</li>
+          <li>化解衝突</li>
+          <li>掌握談判</li>
+          <li>維持關係</li>
         </ul>
         <div class="volume-foot"><span>ISBN 978-986-89796-4-2</span><span>NT$380</span></div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ============ 讀者見證 ============ -->
+<section class="testimonials">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">真實讀者見證</span>
+      <h2>他們因為這套書，開始改變</h2>
+    </div>
+    <div class="test-grid reveal">
+      <div class="test-card">
+        <div class="stars">★★★★★</div>
+        <p class="test-quote">總覺得別人聽不懂我講的話。後來才發現，其實是我從來沒有真正聽懂別人在講什麼。</p>
+        <div class="test-author">Anna —— 業務主管</div>
+      </div>
+      <div class="test-card">
+        <div class="stars">★★★★★</div>
+        <p class="test-quote">以前每天和孩子吵架，現在終於能坐下來好好談，是這套書改善了我們之間的關係。</p>
+        <div class="test-author">王太太 —— 家長</div>
+      </div>
+      <div class="test-card">
+        <div class="stars">★★★★★</div>
+        <p class="test-quote">身為主管，這是我讀過最貼近實務的溝通教材。</p>
+        <div class="test-author">Zavier Li —— 企業經理人</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 讀者成果區 ============ -->
+<section class="outcomes">
+  <span class="ghost-char" aria-hidden="true">變</span>
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">讀完之後</span>
+      <h2>你可能會得到的改變</h2>
+      <p class="outcomes-intro">不管你是想把話說得更真誠、更精準，還是想在職場與社交場合更從容自在——這套書，是為每一個想把日子過得更順、把關係處得更好的人準備的。</p>
+    </div>
+    <ul class="outcomes-grid reveal">
+      <li>更容易表達自己的想法</li>
+      <li>更容易聽懂別人的需求</li>
+      <li>減少人際誤解</li>
+      <li>提升工作與家庭溝通品質</li>
+      <li>面對衝突更有信心</li>
+      <li>建立更深的人際連結</li>
+    </ul>
   </div>
 </section>
 
@@ -636,17 +549,37 @@
   </div>
 </section>
 
+<!-- ============ FAQ ============ -->
+<section class="faq">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">常見問題</span>
+      <h2>在開始之前，你可能會想知道</h2>
+    </div>
+    <div class="faq-item reveal">
+      <h3>我平常不太看書，適合嗎？</h3>
+      <p>本書以大量案例與情境說明，閱讀門檻不高。</p>
+    </div>
+    <div class="faq-item reveal">
+      <h3>一定要三冊一起買嗎？</h3>
+      <p>可以單買。但三冊設計為完整學習系統，一起閱讀效果最佳。</p>
+    </div>
+    <div class="faq-item reveal">
+      <h3>適合學生閱讀嗎？</h3>
+      <p>適合國中以上閱讀。</p>
+    </div>
+    <div class="faq-item reveal">
+      <h3>適合主管閱讀嗎？</h3>
+      <p>非常適合。第三冊尤其涵蓋大量職場情境。</p>
+    </div>
+  </div>
+</section>
+
 <!-- ============ CTA ============ -->
 <section class="cta">
   <div class="wrap">
     <span class="eyebrow">改變，從開口的那一刻開始</span>
-    <h2>讓說話，成為你人生中<br>最美麗、最痛快的藝術</h2>
-
-    <ul class="benefits">
-      <li>擁有自在的人際關係，不再害怕開口</li>
-      <li>在職場上展現自信與專業，讓上司賞識、同事信任</li>
-      <li>在感情與家庭中，能精準傳達愛意，化解無謂的爭執</li>
-    </ul>
+    <h2>讓人生少走十年<br>溝通冤枉路</h2>
 
     <div class="cta-covers reveal">
       <img src="cover-1.jpg" alt="說話的藝術1書封">
@@ -655,15 +588,14 @@
     </div>
     <div class="price-row">單冊 NT$380　・　全套三冊 <strong>NT$1,140</strong></div>
 
-    <a href="#" class="seal-button">前往購買全套三冊</a>
-    <p class="cta-note">會說話的人，如魚得水、如沐春風，就算再凶險的環境都能逢凶化吉。</p>
+    <a href="#" class="seal-button">我要開始我的溝通修練</a>
+    <p class="cta-note">一本書改變不了人生，但一句說對的話，有時候真的可以。</p>
   </div>
 </section>
 
 <footer>創意出版社　出版　・　陳海倫 顧問　著</footer>
 
 <script>
-  // 滾動淡入
   if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     const items = document.querySelectorAll('.reveal');
     const obs = new IntersectionObserver((entries)=>{
@@ -674,7 +606,6 @@
     document.querySelectorAll('.reveal').forEach(i=>i.classList.add('is-visible'));
   }
 
-  // 金句輪播
   (function(){
     const stage = document.getElementById('quoteStage');
     const quoteEls = stage.querySelectorAll('.quote-item');
