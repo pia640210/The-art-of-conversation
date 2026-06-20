@@ -75,6 +75,10 @@
   }
   .seal-button:hover{transform:rotate(0deg) translateY(-2px);background:var(--seal-deep);}
   .seal-button:focus-visible{outline:3px solid var(--gold);outline-offset:3px;}
+  .inline-link{color:var(--seal-deep);text-decoration:underline;font-weight:600;}
+  .inline-link:hover{color:var(--seal);}
+  .inline-link-light{color:var(--gold);text-decoration:underline;font-weight:600;}
+  .inline-link-light:hover{color:var(--paper);}
 
   /* ---------- HERO ---------- */
   .hero{position:relative;min-height:92vh;display:flex;align-items:center;padding:120px 0 80px;
@@ -175,11 +179,19 @@
   .volume-body li{font-size:14.5px;color:var(--paper-soft);opacity:0.85;padding-left:18px;position:relative;margin-bottom:8px;}
   .volume-body li::before{content:"·";color:var(--gold);position:absolute;left:4px;}
   .volume-foot{margin-top:18px;display:flex;gap:16px;font-size:12.5px;color:var(--ink-grey);}
+  .buy-links{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px;}
+  .buy-link{
+    font-size:12px;padding:7px 16px;border:1px solid rgba(156,122,69,0.4);border-radius:20px;
+    color:var(--paper-soft);text-decoration:none;transition:background .2s ease,color .2s ease,border-color .2s ease;
+  }
+  .buy-link:hover{background:var(--seal);color:var(--paper);border-color:var(--seal);}
+  .buy-note-mini{margin-top:10px;font-size:11.5px;color:var(--ink-grey);}
 
   /* ---------- CTA Strip（中段） ---------- */
   .cta-strip{background:var(--ink-card);padding:60px 0;text-align:center;border-top:1px solid rgba(156,122,69,0.2);border-bottom:1px solid rgba(156,122,69,0.2);}
   .cta-strip p.lead{font-family:var(--serif);font-size:18px;margin-bottom:24px;color:var(--paper-soft);}
   .cta-strip .seal-button{padding:14px 34px;font-size:15px;}
+  .cta-strip-note{margin-top:18px;font-size:13px;color:var(--paper-soft);opacity:0.8;}
 
   /* ---------- 適合誰／不適合誰 ---------- */
   .fit{background:var(--paper);color:var(--ink);padding:100px 0;}
@@ -295,7 +307,7 @@
       <h1>講對話讓你<span class="accent">上天堂</span>，<br>說錯話讓你<span class="accent">見閻王</span>！</h1>
       <p class="lede">活著，本身就是一場藝術。而表達，是生命力最迷人的展現。</p>
       <a href="https://pia640210.github.io/creative-publisher/purchase.html" class="seal-button hero-cta">立即收藏《說話的藝術》全三冊</a>
-      <p class="hero-cta-note">全套三冊優惠價 NT$1,100</p>
+      <p class="hero-cta-note">全套三冊優惠價 NT$1,100　・　<a href="#volumes" class="inline-link-light">或單本於網路書店選購</a></p>
     </div>
     <div class="cover-stack">
       <img class="cover-3" src="cover-3.jpg" alt="《說話的藝術3：你怎樣說話，決定你是怎樣的人！》書封">
@@ -419,7 +431,7 @@
 </section>
 
 <!-- ============ 三冊 ============ -->
-<section class="volumes">
+<section class="volumes" id="volumes">
   <span class="ghost-char" aria-hidden="true">話</span>
   <div class="wrap">
     <div class="volumes-head reveal">
@@ -440,6 +452,12 @@
           <li>減少衝動與誤解</li>
         </ul>
         <div class="volume-foot"><span>ISBN 978-986-89796-2-8</span><span>NT$380</span></div>
+        <div class="buy-links">
+          <a class="buy-link" href="https://www.sanmin.com.tw/product/index/004797093" target="_blank" rel="noopener">三民</a>
+          <a class="buy-link" href="https://www.iread.com.tw/Detail/ProdDetail/B000313897?biztype=1" target="_blank" rel="noopener">iRead</a>
+          <a class="buy-link" href="https://www.books.com.tw/products/0010653583?loc=P_0005_004" target="_blank" rel="noopener">博客來</a>
+        </div>
+        <div class="buy-note-mini">缺貨請洽出版社 <a href="tel:+886287122800" class="inline-link-light">(02) 8712-2800</a></div>
       </div>
     </div>
 
@@ -456,6 +474,12 @@
           <li>表達更有自信</li>
         </ul>
         <div class="volume-foot"><span>ISBN 978-986-89796-3-5</span><span>NT$380</span></div>
+        <div class="buy-links">
+          <a class="buy-link" href="https://www.sanmin.com.tw/product/index/004797094" target="_blank" rel="noopener">三民</a>
+          <a class="buy-link" href="https://www.iread.com.tw/Detail/ProdDetail/B000313898?biztype=1" target="_blank" rel="noopener">iRead</a>
+          <a class="buy-link" href="https://www.books.com.tw/products/0010653585?loc=P_0005_005" target="_blank" rel="noopener">博客來</a>
+        </div>
+        <div class="buy-note-mini">缺貨請洽出版社 <a href="tel:+886287122800" class="inline-link-light">(02) 8712-2800</a></div>
       </div>
     </div>
 
@@ -472,6 +496,12 @@
           <li>維持關係又守住立場</li>
         </ul>
         <div class="volume-foot"><span>ISBN 978-986-89796-4-2</span><span>NT$380</span></div>
+        <div class="buy-links">
+          <a class="buy-link" href="https://www.sanmin.com.tw/product/index/004797095" target="_blank" rel="noopener">三民</a>
+          <a class="buy-link" href="https://www.iread.com.tw/Detail/ProdDetail/B000313899?biztype=2" target="_blank" rel="noopener">iRead</a>
+          <a class="buy-link" href="https://www.books.com.tw/products/0010653588?loc=P_0005_006" target="_blank" rel="noopener">博客來</a>
+        </div>
+        <div class="buy-note-mini">缺貨請洽出版社 <a href="tel:+886287122800" class="inline-link-light">(02) 8712-2800</a></div>
       </div>
     </div>
   </div>
@@ -482,6 +512,7 @@
   <div class="wrap">
     <p class="lead reveal">如果這三冊說的，正是你想學的——</p>
     <a href="https://pia640210.github.io/creative-publisher/purchase.html" class="seal-button reveal">我想開始改變自己的溝通方式</a>
+    <p class="cta-strip-note reveal">或<a href="#volumes" class="inline-link-light">至各大網路書店選購單本</a></p>
   </div>
 </section>
 
@@ -569,6 +600,7 @@
   <div class="wrap">
     <p class="lead reveal">如果這些改變，也是你想要的——</p>
     <a href="https://pia640210.github.io/creative-publisher/purchase.html" class="seal-button reveal">立即收藏全套三冊</a>
+    <p class="cta-strip-note reveal">或<a href="#volumes" class="inline-link-light">至各大網路書店選購單本</a></p>
   </div>
 </section>
 
@@ -654,6 +686,7 @@
     <a href="https://pia640210.github.io/creative-publisher/purchase.html" class="seal-button">我要開始我的溝通修練</a>
     <p class="cta-note">一本書改變不了人生，但一句說對的話，有時候真的可以。</p>
     <p class="cta-phone">套書優惠價僅限向出版社直接訂購，也可來電 <a href="tel:+886287122800">(02) 8712-2800</a> 訂購</p>
+    <p class="cta-phone">或<a href="#volumes" class="inline-link">至各大網路書店選購單本</a></p>
   </div>
 </section>
 
