@@ -154,7 +154,15 @@
   .authority h2{font-family:var(--serif);font-weight:700;font-size:clamp(24px,3.6vw,32px);margin:14px 0 10px;max-width:18ch;}
   .authority .sub{font-size:15.5px;color:var(--ink-grey);max-width:46ch;margin-bottom:48px;}
   .authority-grid{display:flex;gap:40px;align-items:flex-start;flex-wrap:wrap;}
-  .authority-photo{flex:0 0 200px;width:200px;border-radius:16px;overflow:hidden;box-shadow:0 20px 40px -16px rgba(0,0,0,0.3);}
+  .authority-photo{
+    flex-shrink:0;
+    width:200px;
+    aspect-ratio:1/1;
+    object-fit:cover;
+    border-radius:16px;
+    overflow:hidden;
+    box-shadow:0 20px 40px -16px rgba(0,0,0,0.3);
+  }
   .authority-body{flex:1 1 320px;}
   .authority-name{font-family:var(--serif);font-weight:700;font-size:20px;margin-bottom:16px;}
   .authority-list{list-style:none;margin:0 0 28px;}
@@ -198,10 +206,17 @@
   .volumes-head{position:relative;z-index:1;margin-bottom:54px;}
   .volumes-head h2{font-family:var(--serif);font-weight:700;font-size:clamp(24px,3.6vw,32px);margin-top:14px;}
   .volume-card{
-    position:relative;z-index:1;display:flex;gap:28px;background:var(--ink-card);
+    position:relative;z-index:1;display:flex;gap:28px;align-items:flex-start;background:var(--ink-card);
     border:1px solid rgba(156,122,69,0.22);border-radius:12px;padding:32px 28px;margin-bottom:22px;
   }
-  .volume-cover{width:128px;flex-shrink:0;border-radius:10px;box-shadow:0 16px 34px -12px rgba(0,0,0,0.55);}
+  .volume-cover{
+    width:128px;
+    flex-shrink:0;
+    aspect-ratio:5/7;
+    object-fit:cover;
+    border-radius:10px;
+    box-shadow:0 16px 34px -12px rgba(0,0,0,0.55);
+  }
   .volume-body .tag{font-size:12px;letter-spacing:0.2em;color:var(--seal);font-weight:700;}
   .volume-body h3{font-family:var(--serif);font-size:clamp(18px,2.4vw,22px);font-weight:700;margin:8px 0 14px;line-height:1.5;}
   .vol-outcome{font-family:var(--serif);font-weight:700;font-size:17px;color:var(--paper);margin-bottom:14px;}
@@ -586,7 +601,7 @@
       <img src="cover-2.jpg" alt="說話的藝術2書封">
       <img src="cover-3.jpg" alt="說話的藝術3書封">
     </div>
-    <div class="price-row">單冊 NT$380　・　全套三冊 <strong>NT$1,140</strong></div>
+    <div class="price-row">單冊 NT$380　・　全套三冊 <strong>NT$1,100</strong></div>
 
     <a href="#" class="seal-button">我要開始我的溝通修練</a>
     <p class="cta-note">一本書改變不了人生，但一句說對的話，有時候真的可以。</p>
