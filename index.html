@@ -4,6 +4,38 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>說話的藝術｜陳海倫 著・全三冊</title>
+<meta name="description" content="《說話的藝術》全三冊，由陳海倫顧問30多年實務經驗集結而成，帶你從理解自己、提升表達，到掌握高品質溝通，改善人際、親子與職場關係。">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="說話的藝術｜陳海倫 著・全三冊">
+<meta property="og:description" content="《說話的藝術》全三冊，由陳海倫顧問30多年實務經驗集結而成，帶你從理解自己、提升表達，到掌握高品質溝通，改善人際、親子與職場關係。">
+<meta property="og:url" content="https://pia640210.github.io/The-art-of-conversation/">
+<meta property="og:image" content="https://pia640210.github.io/The-art-of-conversation/cover-1.jpg">
+<meta property="og:locale" content="zh_TW">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="說話的藝術｜陳海倫 著・全三冊">
+<meta name="twitter:description" content="《說話的藝術》全三冊，由陳海倫顧問30多年實務經驗集結而成，帶你從理解自己、提升表達，到掌握高品質溝通，改善人際、親子與職場關係。">
+<meta name="twitter:image" content="https://pia640210.github.io/The-art-of-conversation/cover-1.jpg">
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+  {"@type":"Question","name":"我平常不太看書，適合嗎？","acceptedAnswer":{"@type":"Answer","text":"本書以大量案例與情境說明，閱讀門檻不高。"}},
+  {"@type":"Question","name":"一定要三冊一起買嗎？","acceptedAnswer":{"@type":"Answer","text":"可以單買。但三冊設計為完整學習系統，一起閱讀效果最佳。"}},
+  {"@type":"Question","name":"適合學生閱讀嗎？","acceptedAnswer":{"@type":"Answer","text":"適合國中以上閱讀。"}},
+  {"@type":"Question","name":"適合主管閱讀嗎？","acceptedAnswer":{"@type":"Answer","text":"非常適合。第三冊尤其涵蓋大量職場情境。"}}
+]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Book","name":"說話的藝術：講對話讓你上天堂，說錯話讓你見閻王！","isbn":"978-986-89796-2-8","bookFormat":"https://schema.org/Paperback","author":{"@type":"Person","name":"陳海倫"},"publisher":{"@type":"Organization","name":"創意出版社"},"image":"https://pia640210.github.io/The-art-of-conversation/cover-1.jpg","inLanguage":"zh-TW"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Book","name":"說話的藝術2：真金不怕火煉，只怕你從來都不練！","isbn":"978-986-89796-3-5","bookFormat":"https://schema.org/Paperback","author":{"@type":"Person","name":"陳海倫"},"publisher":{"@type":"Organization","name":"創意出版社"},"image":"https://pia640210.github.io/The-art-of-conversation/cover-2.jpg","inLanguage":"zh-TW"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Book","name":"說話的藝術3：你怎樣說話，決定你是怎樣的人！","isbn":"978-986-89796-4-2","bookFormat":"https://schema.org/Paperback","author":{"@type":"Person","name":"陳海倫"},"publisher":{"@type":"Organization","name":"創意出版社"},"image":"https://pia640210.github.io/The-art-of-conversation/cover-3.jpg","inLanguage":"zh-TW"}
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700;900&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
@@ -23,88 +55,39 @@
   }
   *{margin:0;padding:0;box-sizing:border-box;}
   html{scroll-behavior:smooth;}
-  body{
-    font-family:var(--sans);
-    background:var(--ink);
-    color:var(--paper);
-    overflow-x:hidden;
-    line-height:1.8;
-  }
+  body{font-family:var(--sans);background:var(--ink);color:var(--paper);overflow-x:hidden;line-height:1.8;}
   img,svg{display:block;max-width:100%;}
   .wrap{max-width:920px;margin:0 auto;padding:0 28px;}
 
   /* ---------- 共用元件 ---------- */
-  .eyebrow{
-    font-family:var(--sans);
-    font-size:13px;
-    font-weight:700;
-    letter-spacing:0.35em;
-    color:var(--gold);
-  }
-  .ghost-char{
-    position:absolute;
-    font-family:var(--serif);
-    font-weight:900;
-    line-height:1;
-    color:var(--paper);
-    opacity:0.05;
-    pointer-events:none;
-    user-select:none;
-    z-index:0;
-  }
-  .seal{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    width:46px;
-    height:46px;
-    border:1.5px solid var(--seal);
-    border-radius:6px;
-    color:var(--seal);
-    font-family:var(--serif);
-    font-weight:700;
-    font-size:20px;
-    transform:rotate(-6deg);
-    flex-shrink:0;
-  }
-  .reveal{
-    opacity:0;
-    transform:translateY(22px);
-    transition:opacity .7s ease, transform .7s ease;
-  }
+  .eyebrow{font-family:var(--sans);font-size:13px;font-weight:700;letter-spacing:0.35em;color:var(--gold);}
+  .ghost-char{position:absolute;font-family:var(--serif);font-weight:900;line-height:1;color:var(--paper);opacity:0.05;pointer-events:none;user-select:none;z-index:0;}
+  .seal{display:inline-flex;align-items:center;justify-content:center;width:46px;height:46px;border:1.5px solid var(--seal);border-radius:6px;color:var(--seal);font-family:var(--serif);font-weight:700;font-size:20px;transform:rotate(-6deg);flex-shrink:0;}
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease, transform .7s ease;}
   .reveal.is-visible{opacity:1;transform:translateY(0);}
+  @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none;}*{animation:none !important;transition:none !important;}}
 
-  @media (prefers-reduced-motion:reduce){
-    .reveal{opacity:1;transform:none;transition:none;}
-    *{animation:none !important;transition:none !important;}
+  .seal-button{
+    display:inline-flex;align-items:center;gap:10px;background:var(--seal);color:var(--paper);
+    font-family:var(--serif);font-weight:700;font-size:17px;padding:18px 42px;border-radius:8px;
+    text-decoration:none;transform:rotate(-1.2deg);transition:transform .25s ease, background .25s ease;
+    box-shadow:0 14px 30px -10px rgba(184,59,30,0.55);
   }
+  .seal-button:hover{transform:rotate(0deg) translateY(-2px);background:var(--seal-deep);}
+  .seal-button:focus-visible{outline:3px solid var(--gold);outline-offset:3px;}
 
   /* ---------- HERO ---------- */
-  .hero{
-    position:relative;
-    min-height:92vh;
-    display:flex;
-    align-items:center;
-    padding:120px 0 80px;
-    background:
-      radial-gradient(ellipse at 80% 0%, rgba(156,122,69,0.12), transparent 55%),
-      var(--ink);
-    overflow:hidden;
-  }
+  .hero{position:relative;min-height:92vh;display:flex;align-items:center;padding:120px 0 80px;
+    background:radial-gradient(ellipse at 80% 0%, rgba(156,122,69,0.12), transparent 55%), var(--ink);overflow:hidden;}
   .hero .ghost-char{right:-10vw;top:10%;font-size:54vw;opacity:0.035;}
-  .hero-grid{
-    display:flex;align-items:center;justify-content:space-between;
-    gap:52px;flex-wrap:wrap;position:relative;z-index:1;
-  }
+  .hero-grid{display:flex;align-items:center;justify-content:space-between;gap:52px;flex-wrap:wrap;position:relative;z-index:1;}
   .hero-text{flex:1 1 340px;}
   .hero-eyebrow-row{display:flex;align-items:center;gap:14px;margin-bottom:26px;}
-  .hero h1{
-    font-family:var(--serif);font-weight:900;
-    font-size:clamp(32px, 5.6vw, 60px);
-    line-height:1.32;letter-spacing:0.01em;max-width:11ch;
-  }
+  .hero h1{font-family:var(--serif);font-weight:900;font-size:clamp(32px, 5.6vw, 60px);line-height:1.32;letter-spacing:0.01em;max-width:11ch;}
   .hero h1 .accent{color:var(--seal);}
   .hero p.lede{margin-top:26px;max-width:32ch;font-size:17px;color:var(--paper-soft);opacity:0.85;}
+  .hero-cta{margin-top:36px;}
+  .hero-cta-note{margin-top:14px;font-size:13px;color:var(--gold);letter-spacing:0.05em;}
   .cover-stack{position:relative;flex:0 0 260px;width:260px;height:330px;}
   .cover-stack img{position:absolute;width:190px;border-radius:10px;box-shadow:0 28px 50px -16px rgba(0,0,0,0.65);}
   .cover-stack .cover-3{left:4px;top:58px;transform:rotate(-13deg);z-index:1;animation:coverIn3 .8s ease both;animation-delay:.35s;}
@@ -114,29 +97,20 @@
   @keyframes coverIn2{from{opacity:0;transform:translateY(28px) rotate(7deg) scale(.96);}to{opacity:1;transform:translateY(0) rotate(7deg) scale(1);}}
   @keyframes coverIn3{from{opacity:0;transform:translateY(28px) rotate(-13deg) scale(.96);}to{opacity:1;transform:translateY(0) rotate(-13deg) scale(1);}}
   @media (max-width:900px){.hero-grid{justify-content:center;text-align:left;}.cover-stack{margin:8px auto 0;}}
-  .scroll-cue{
-    position:absolute;bottom:36px;left:28px;font-size:12px;letter-spacing:0.25em;color:var(--gold);
-    display:flex;align-items:center;gap:10px;
-  }
+  .scroll-cue{position:absolute;bottom:36px;left:28px;font-size:12px;letter-spacing:0.25em;color:var(--gold);display:flex;align-items:center;gap:10px;}
   .scroll-cue .line{width:1px;height:34px;background:linear-gradient(var(--gold), transparent);}
 
-  /* ---------- 痛點對話區 ---------- */
+  /* ---------- 痛點 ---------- */
   .pain{background:var(--ink);padding:100px 0 90px;position:relative;}
   .pain .wrap{max-width:680px;}
   .pain-intro{margin-bottom:48px;}
   .pain-intro h2{font-family:var(--serif);font-weight:700;font-size:clamp(24px,3.6vw,32px);margin-top:14px;}
   .bubble-row{display:flex;margin-bottom:18px;}
   .bubble-row.from-right{justify-content:flex-end;}
-  .bubble{
-    background:var(--ink-card);border:1px solid rgba(156,122,69,0.25);border-radius:18px;
-    padding:18px 22px;max-width:78%;font-size:15.5px;color:var(--paper);
-  }
+  .bubble{background:var(--ink-card);border:1px solid rgba(156,122,69,0.25);border-radius:18px;padding:18px 22px;max-width:78%;font-size:15.5px;color:var(--paper);}
   .bubble-row:not(.from-right) .bubble{border-top-left-radius:4px;}
   .bubble-row.from-right .bubble{border-top-right-radius:4px;background:#2B2419;}
-  .pain-close{
-    margin-top:40px;font-family:var(--serif);font-size:19px;line-height:1.9;color:var(--paper-soft);
-    border-top:1px solid rgba(156,122,69,0.25);padding-top:32px;
-  }
+  .pain-close{margin-top:40px;font-family:var(--serif);font-size:19px;line-height:1.9;color:var(--paper-soft);border-top:1px solid rgba(156,122,69,0.25);padding-top:32px;}
 
   /* ---------- 核心價值 ---------- */
   .values{background:var(--paper);color:var(--ink);padding:100px 0;}
@@ -154,24 +128,13 @@
   .authority h2{font-family:var(--serif);font-weight:700;font-size:clamp(24px,3.6vw,32px);margin:14px 0 10px;max-width:18ch;}
   .authority .sub{font-size:15.5px;color:var(--ink-grey);max-width:46ch;margin-bottom:48px;}
   .authority-grid{display:flex;gap:40px;align-items:flex-start;flex-wrap:wrap;}
-  .authority-photo{
-    flex-shrink:0;
-    width:200px;
-    aspect-ratio:1/1;
-    object-fit:cover;
-    border-radius:16px;
-    overflow:hidden;
-    box-shadow:0 20px 40px -16px rgba(0,0,0,0.3);
-  }
+  .authority-photo{flex-shrink:0;width:200px;aspect-ratio:1/1;object-fit:cover;border-radius:16px;overflow:hidden;box-shadow:0 20px 40px -16px rgba(0,0,0,0.3);}
   .authority-body{flex:1 1 320px;}
   .authority-name{font-family:var(--serif);font-weight:700;font-size:20px;margin-bottom:16px;}
   .authority-list{list-style:none;margin:0 0 28px;}
   .authority-list li{font-size:14.5px;color:var(--ink-grey);padding-left:18px;position:relative;margin-bottom:9px;}
   .authority-list li::before{content:"·";color:var(--seal);position:absolute;left:4px;}
-  .authority-quote{
-    font-family:var(--serif);font-size:17px;line-height:1.85;
-    border-top:1px solid rgba(92,86,75,0.25);padding-top:24px;
-  }
+  .authority-quote{font-family:var(--serif);font-size:17px;line-height:1.85;border-top:1px solid rgba(92,86,75,0.25);padding-top:24px;}
 
   /* ---------- 差異化比較 ---------- */
   .compare{background:var(--ink);padding:100px 0;}
@@ -184,10 +147,7 @@
   .compare-cell{padding:18px 18px;border-radius:10px;font-size:14.5px;line-height:1.6;}
   .compare-cell.generic{background:var(--ink-card);color:var(--paper-soft);opacity:.75;border:1px solid rgba(156,122,69,0.15);}
   .compare-cell.ours{background:rgba(184,59,30,0.14);color:var(--paper);border:1px solid rgba(184,59,30,0.4);font-weight:500;}
-  @media (max-width:640px){
-    .compare-cell{font-size:13px;padding:14px;}
-    .compare-head span{font-size:10.5px;}
-  }
+  @media (max-width:640px){.compare-cell{font-size:13px;padding:14px;}.compare-head span{font-size:10.5px;}}
 
   /* ---------- 作者親自分享 ---------- */
   .authorvid{background:var(--paper);color:var(--ink);padding:90px 0 100px;}
@@ -205,18 +165,8 @@
   .volumes .ghost-char{left:-10vw;bottom:-8%;font-size:48vw;opacity:0.04;}
   .volumes-head{position:relative;z-index:1;margin-bottom:54px;}
   .volumes-head h2{font-family:var(--serif);font-weight:700;font-size:clamp(24px,3.6vw,32px);margin-top:14px;}
-  .volume-card{
-    position:relative;z-index:1;display:flex;gap:28px;align-items:flex-start;background:var(--ink-card);
-    border:1px solid rgba(156,122,69,0.22);border-radius:12px;padding:32px 28px;margin-bottom:22px;
-  }
-  .volume-cover{
-    width:128px;
-    flex-shrink:0;
-    aspect-ratio:5/7;
-    object-fit:cover;
-    border-radius:10px;
-    box-shadow:0 16px 34px -12px rgba(0,0,0,0.55);
-  }
+  .volume-card{position:relative;z-index:1;display:flex;gap:28px;align-items:flex-start;background:var(--ink-card);border:1px solid rgba(156,122,69,0.22);border-radius:12px;padding:32px 28px;margin-bottom:22px;}
+  .volume-cover{width:128px;flex-shrink:0;aspect-ratio:5/7;object-fit:cover;border-radius:10px;box-shadow:0 16px 34px -12px rgba(0,0,0,0.55);}
   .volume-body .tag{font-size:12px;letter-spacing:0.2em;color:var(--seal);font-weight:700;}
   .volume-body h3{font-family:var(--serif);font-size:clamp(18px,2.4vw,22px);font-weight:700;margin:8px 0 14px;line-height:1.5;}
   .vol-outcome{font-family:var(--serif);font-weight:700;font-size:17px;color:var(--paper);margin-bottom:14px;}
@@ -225,6 +175,26 @@
   .volume-body li{font-size:14.5px;color:var(--paper-soft);opacity:0.85;padding-left:18px;position:relative;margin-bottom:8px;}
   .volume-body li::before{content:"·";color:var(--gold);position:absolute;left:4px;}
   .volume-foot{margin-top:18px;display:flex;gap:16px;font-size:12.5px;color:var(--ink-grey);}
+
+  /* ---------- CTA Strip（中段） ---------- */
+  .cta-strip{background:var(--ink-card);padding:60px 0;text-align:center;border-top:1px solid rgba(156,122,69,0.2);border-bottom:1px solid rgba(156,122,69,0.2);}
+  .cta-strip p.lead{font-family:var(--serif);font-size:18px;margin-bottom:24px;color:var(--paper-soft);}
+  .cta-strip .seal-button{padding:14px 34px;font-size:15px;}
+
+  /* ---------- 適合誰／不適合誰 ---------- */
+  .fit{background:var(--paper);color:var(--ink);padding:100px 0;}
+  .fit .eyebrow{color:var(--seal-deep);}
+  .fit h2{font-family:var(--serif);font-weight:700;font-size:clamp(24px,3.6vw,32px);margin:14px 0 44px;}
+  .fit-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;}
+  .fit-col{padding:30px 26px;border-radius:12px;}
+  .fit-yes{background:rgba(184,59,30,0.06);border:1px solid rgba(184,59,30,0.25);}
+  .fit-no{background:var(--paper-card);border:1px solid rgba(92,86,75,0.18);}
+  .fit-col h3{font-family:var(--serif);font-size:16.5px;font-weight:700;margin-bottom:18px;line-height:1.5;}
+  .fit-col ul{list-style:none;}
+  .fit-col li{font-size:14.5px;color:var(--ink-grey);margin-bottom:11px;padding-left:24px;position:relative;}
+  .fit-yes li::before{content:"✓";color:var(--seal);position:absolute;left:0;font-weight:700;}
+  .fit-no li::before{content:"✗";color:var(--ink-grey);position:absolute;left:0;font-weight:700;}
+  @media (max-width:700px){.fit-grid{grid-template-columns:1fr;}}
 
   /* ---------- 讀者見證 ---------- */
   .testimonials{background:var(--paper);color:var(--ink);padding:100px 0;}
@@ -241,10 +211,7 @@
   .outcomes{background:var(--ink);padding:110px 0;position:relative;}
   .outcomes .ghost-char{right:-8vw;bottom:-12%;font-size:46vw;opacity:0.045;}
   .outcomes .eyebrow{color:var(--gold);}
-  .outcomes h2{
-    position:relative;z-index:1;font-family:var(--serif);font-weight:900;
-    font-size:clamp(26px,4.2vw,38px);margin:14px 0 24px;max-width:16ch;
-  }
+  .outcomes h2{position:relative;z-index:1;font-family:var(--serif);font-weight:900;font-size:clamp(26px,4.2vw,38px);margin:14px 0 24px;max-width:16ch;}
   .outcomes-intro{position:relative;z-index:1;font-size:15.5px;color:var(--paper-soft);opacity:.85;max-width:48ch;margin-bottom:44px;}
   .outcomes-grid{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:18px 30px;}
   .outcomes-grid li{list-style:none;font-size:16px;display:flex;gap:10px;}
@@ -252,17 +219,16 @@
   @media (max-width:640px){.outcomes-grid{grid-template-columns:1fr;}}
 
   /* ---------- 金句 ---------- */
-  .quotes{position:relative;background:var(--ink);padding:130px 0;overflow:hidden;display:flex;align-items:center;min-height:50vh;}
+  .quotes{position:relative;background:var(--ink);padding:120px 0 130px;overflow:hidden;}
   .quotes .ghost-char{right:-4vw;top:-10%;font-size:50vw;opacity:0.045;}
+  .quotes-head{position:relative;z-index:1;margin-bottom:50px;}
+  .quotes-head h2{font-family:var(--serif);font-weight:700;font-size:clamp(22px,3.4vw,28px);margin-top:12px;}
   .quote-stage{position:relative;z-index:1;min-height:200px;}
-  .quote-item{
-    position:absolute;inset:0;opacity:0;transition:opacity 1s ease;
-    font-family:var(--serif);font-size:clamp(20px,3.6vw,30px);line-height:1.65;max-width:24ch;
-  }
+  .quote-item{position:absolute;inset:0;opacity:0;transition:opacity 1s ease;font-family:var(--serif);font-size:clamp(20px,3.6vw,30px);line-height:1.65;max-width:24ch;}
   .quote-item.active{opacity:1;position:relative;}
   .quote-item::before{content:"「";color:var(--seal);}
   .quote-item::after{content:"」";color:var(--seal);}
-  .quote-dots{display:flex;gap:8px;margin-top:34px;}
+  .quote-dots{display:flex;gap:8px;margin-top:34px;position:relative;z-index:1;}
   .quote-dots span{width:6px;height:6px;border-radius:50%;background:rgba(242,233,216,0.25);transition:background .3s;}
   .quote-dots span.active{background:var(--gold);}
 
@@ -276,22 +242,27 @@
   .faq-item h3::before{content:"Q";color:var(--seal);}
   .faq-item p{font-size:15px;color:var(--ink-grey);padding-left:23px;}
 
-  /* ---------- CTA ---------- */
+  /* ---------- 情感收尾 ---------- */
+  .farewell{background:var(--ink);padding:130px 0;text-align:center;}
+  .farewell .eyebrow{color:var(--gold);}
+  .farewell h2{font-family:var(--serif);font-weight:700;font-size:clamp(24px,3.6vw,30px);margin:16px 0 36px;}
+  .farewell p.body-text{font-family:var(--serif);font-size:18px;line-height:2;color:var(--paper-soft);max-width:26ch;margin:0 auto;}
+  .farewell .dedication{margin-top:40px;font-size:16px;color:var(--paper);opacity:.92;border-top:1px solid rgba(156,122,69,0.25);padding-top:32px;max-width:26ch;margin-left:auto;margin-right:auto;}
+  .farewell .dedication strong{display:block;font-family:var(--serif);font-size:19px;margin-bottom:14px;color:var(--paper);}
+
+  /* ---------- CTA（最終） ---------- */
   .cta{background:var(--paper);color:var(--ink);padding:110px 0 90px;text-align:center;}
   .cta .eyebrow{color:var(--seal-deep);}
   .cta h2{font-family:var(--serif);font-weight:900;font-size:clamp(28px,4.4vw,40px);margin:16px 0 36px;}
   .cta-covers{display:flex;justify-content:center;gap:14px;margin-bottom:34px;}
   .cta-covers img{width:68px;border-radius:6px;box-shadow:0 10px 22px -8px rgba(0,0,0,0.4);}
+  .urgency-box{background:var(--paper-card);border:1px solid rgba(184,59,30,0.3);border-radius:12px;padding:24px 28px;max-width:340px;margin:0 auto 34px;text-align:left;}
+  .urgency-title{font-family:var(--serif);font-weight:700;font-size:15px;color:var(--seal-deep);margin-bottom:14px;letter-spacing:0.02em;}
+  .urgency-list{list-style:none;}
+  .urgency-list li{font-size:14px;color:var(--ink-grey);margin-bottom:7px;padding-left:22px;position:relative;}
+  .urgency-list li::before{content:"✓";color:var(--seal);position:absolute;left:0;font-weight:700;}
   .price-row{font-family:var(--serif);font-size:18px;margin-bottom:34px;color:var(--ink-grey);}
   .price-row strong{color:var(--ink);font-size:26px;font-weight:700;}
-  .seal-button{
-    display:inline-flex;align-items:center;gap:10px;background:var(--seal);color:var(--paper);
-    font-family:var(--serif);font-weight:700;font-size:17px;padding:18px 42px;border-radius:8px;
-    text-decoration:none;transform:rotate(-1.2deg);transition:transform .25s ease, background .25s ease;
-    box-shadow:0 14px 30px -10px rgba(184,59,30,0.55);
-  }
-  .seal-button:hover{transform:rotate(0deg) translateY(-2px);background:var(--seal-deep);}
-  .seal-button:focus-visible{outline:3px solid var(--gold);outline-offset:3px;}
   .cta-note{margin-top:20px;font-size:14px;color:var(--ink-grey);line-height:1.8;max-width:30ch;margin-left:auto;margin-right:auto;}
   .cta-phone{margin-top:12px;font-size:12.5px;color:var(--ink-grey);opacity:0.75;}
   .cta-phone a{color:var(--seal-deep);text-decoration:none;font-weight:700;}
@@ -323,6 +294,8 @@
       </div>
       <h1>講對話讓你<span class="accent">上天堂</span>，<br>說錯話讓你<span class="accent">見閻王</span>！</h1>
       <p class="lede">活著，本身就是一場藝術。而表達，是生命力最迷人的展現。</p>
+      <a href="https://pia640210.github.io/creative-publisher/purchase.html" class="seal-button hero-cta">立即收藏《說話的藝術》全三冊</a>
+      <p class="hero-cta-note">全套三冊優惠價 NT$1,100</p>
     </div>
     <div class="cover-stack">
       <img class="cover-3" src="cover-3.jpg" alt="《說話的藝術3：你怎樣說話，決定你是怎樣的人！》書封">
@@ -460,11 +433,11 @@
         <span class="tag">卷一・內功養成篇</span>
         <h3>講對話讓你上天堂，說錯話讓你見閻王！</h3>
         <p class="vol-outcome">學會先理解自己</p>
-        <span class="learn-label">你會學到</span>
+        <span class="learn-label">讀完後你將能夠</span>
         <ul>
-          <li>管理情緒</li>
-          <li>提升自我覺察</li>
-          <li>避免衝動傷人</li>
+          <li>更了解自己的情緒</li>
+          <li>更清楚自己的表達模式</li>
+          <li>減少衝動與誤解</li>
         </ul>
         <div class="volume-foot"><span>ISBN 978-986-89796-2-8</span><span>NT$380</span></div>
       </div>
@@ -476,11 +449,11 @@
         <span class="tag">卷二・技巧實戰篇</span>
         <h3>真金不怕火煉，只怕你從來都不練！</h3>
         <p class="vol-outcome">讓別人更願意聽你說話</p>
-        <span class="learn-label">你會學到</span>
+        <span class="learn-label">讀完後你將能夠</span>
         <ul>
-          <li>增加說服力</li>
-          <li>強化表達能力</li>
-          <li>建立影響力</li>
+          <li>提升說服力</li>
+          <li>讓別人願意聽你說話</li>
+          <li>表達更有自信</li>
         </ul>
         <div class="volume-foot"><span>ISBN 978-986-89796-3-5</span><span>NT$380</span></div>
       </div>
@@ -492,13 +465,53 @@
         <span class="tag">卷三・情境破解篇</span>
         <h3>你怎樣說話，決定你是怎樣的人！</h3>
         <p class="vol-outcome">面對難搞的人也不再害怕</p>
-        <span class="learn-label">你會學到</span>
+        <span class="learn-label">讀完後你將能夠</span>
         <ul>
-          <li>化解衝突</li>
-          <li>掌握談判</li>
-          <li>維持關係</li>
+          <li>面對衝突更冷靜</li>
+          <li>提高談判能力</li>
+          <li>維持關係又守住立場</li>
         </ul>
         <div class="volume-foot"><span>ISBN 978-986-89796-4-2</span><span>NT$380</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA 2 ============ -->
+<section class="cta-strip">
+  <div class="wrap">
+    <p class="lead reveal">如果這三冊說的，正是你想學的——</p>
+    <a href="https://pia640210.github.io/creative-publisher/purchase.html" class="seal-button reveal">我想開始改變自己的溝通方式</a>
+  </div>
+</section>
+
+<!-- ============ 適合誰／不適合誰 ============ -->
+<section class="fit">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">先確認一下</span>
+      <h2>這套書適合誰？</h2>
+    </div>
+    <div class="fit-grid reveal">
+      <div class="fit-col fit-yes">
+        <h3>這套書適合你，如果你⋯</h3>
+        <ul>
+          <li>想改善人際關係</li>
+          <li>想提升表達能力</li>
+          <li>容易被誤解</li>
+          <li>想改善親子關係</li>
+          <li>想提升職場影響力</li>
+          <li>想學習傾聽</li>
+        </ul>
+      </div>
+      <div class="fit-col fit-no">
+        <h3>這套書可能不適合你，如果你⋯</h3>
+        <ul>
+          <li>只想學話術</li>
+          <li>不願意練習</li>
+          <li>期待速成技巧</li>
+          <li>不願意理解他人</li>
+        </ul>
       </div>
     </div>
   </div>
@@ -515,17 +528,17 @@
       <div class="test-card">
         <div class="stars">★★★★★</div>
         <p class="test-quote">總覺得別人聽不懂我講的話。後來才發現，其實是我從來沒有真正聽懂別人在講什麼。</p>
-        <div class="test-author">Anna —— 業務主管</div>
+        <div class="test-author">業務主管</div>
       </div>
       <div class="test-card">
         <div class="stars">★★★★★</div>
         <p class="test-quote">以前每天和孩子吵架，現在終於能坐下來好好談，是這套書改善了我們之間的關係。</p>
-        <div class="test-author">王太太 —— 家長</div>
+        <div class="test-author">家長</div>
       </div>
       <div class="test-card">
         <div class="stars">★★★★★</div>
         <p class="test-quote">身為主管，這是我讀過最貼近實務的溝通教材。</p>
-        <div class="test-author">Zavier Li —— 企業經理人</div>
+        <div class="test-author">企業經理人</div>
       </div>
     </div>
   </div>
@@ -551,10 +564,22 @@
   </div>
 </section>
 
+<!-- ============ CTA 3 ============ -->
+<section class="cta-strip">
+  <div class="wrap">
+    <p class="lead reveal">如果這些改變，也是你想要的——</p>
+    <a href="https://pia640210.github.io/creative-publisher/purchase.html" class="seal-button reveal">立即收藏全套三冊</a>
+  </div>
+</section>
+
 <!-- ============ 金句 ============ -->
 <section class="quotes">
   <span class="ghost-char" aria-hidden="true">話</span>
   <div class="wrap">
+    <div class="quotes-head reveal">
+      <span class="eyebrow">字字珠璣</span>
+      <h2>書中最受歡迎的五段文字</h2>
+    </div>
     <div class="quote-stage" id="quoteStage">
       <p class="quote-item active">「活著」本身就是一種藝術！人類的生命力，還能藉著「說話」的方式去傳達，這是一門「活」的藝術。</p>
       <p class="quote-item">誠意，永遠在技巧之上。技巧再好，如果沒有心、沒有意圖、沒有真正的感情，根本沒辦法讓對方欣賞，也不可能會感動。</p>
@@ -592,7 +617,17 @@
   </div>
 </section>
 
-<!-- ============ CTA ============ -->
+<!-- ============ 情感收尾 ============ -->
+<section class="farewell">
+  <div class="wrap reveal">
+    <span class="eyebrow">寫在最後</span>
+    <h2>也許問題從來不在努力</h2>
+    <p class="body-text">也許你不是不夠努力。<br>也許你只是從來沒有學過，<br>如何把心裡真正想說的話，<br>傳達給別人。</p>
+    <div class="dedication"><strong>《說話的藝術》</strong>獻給每一位想被理解，<br>也願意理解別人的人。</div>
+  </div>
+</section>
+
+<!-- ============ CTA（最終） ============ -->
 <section class="cta">
   <div class="wrap">
     <span class="eyebrow">改變，從開口的那一刻開始</span>
@@ -603,6 +638,17 @@
       <img src="cover-2.jpg" alt="說話的藝術2書封">
       <img src="cover-3.jpg" alt="說話的藝術3書封">
     </div>
+
+    <div class="urgency-box reveal">
+      <div class="urgency-title">出版社直購限定優惠</div>
+      <ul class="urgency-list">
+        <li>全套原價 NT$1,140</li>
+        <li>出版社優惠價 NT$1,100</li>
+        <li>現省 NT$40</li>
+        <li>可直接向出版社訂購</li>
+      </ul>
+    </div>
+
     <div class="price-row">單冊 NT$380　・　全套三冊 <strong>NT$1,100</strong></div>
 
     <a href="https://pia640210.github.io/creative-publisher/purchase.html" class="seal-button">我要開始我的溝通修練</a>
